@@ -1,0 +1,7 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"textscroller": "Text Scroller",
+	"textscroller-desc": "Adds a parser function to embed the text scrolling widget"
+}
