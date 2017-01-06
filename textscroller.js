@@ -112,7 +112,7 @@ if ( typeof Object.create !== 'function' ) {
 	var typers = {};
 
 	// Init the typers
-	$( document ).ready( function() {
+	$( function() {
 		adjustCSS();
 		addLineBreaks();
 
