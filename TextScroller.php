@@ -14,8 +14,7 @@ $wgExtensionCredits['parserhook'][] = array(
 $wgResourceModules['ext.textscroller.styles'] = array(
 	'styles' => 'textscroller.css',
 	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'TextScroller',
-	'position' => 'top'
+	'remoteExtPath' => 'TextScroller'
 );
 
 $wgResourceModules['ext.textscroller.scripts'] = array(

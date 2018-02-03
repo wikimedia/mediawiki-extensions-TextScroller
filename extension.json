@@ -30,12 +30,10 @@
 	},
 	"ResourceModules": {
 		"ext.textscroller.styles": {
-			"styles": "textscroller.css",
-			"position": "top"
+			"styles": "textscroller.css"
 		},
 		"ext.textscroller.scripts": {
-			"scripts": "textscroller.js",
-			"position": "bottom"
+			"scripts": "textscroller.js"
 		}
 	},
 	"manifest_version": 1
