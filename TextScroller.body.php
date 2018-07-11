@@ -45,10 +45,4 @@ TEXTSCROLLER;
 		$text = preg_replace( "@[\r\n]@", '@br@', $text );
 		return $text;
 	}
-
-	public static function languageGetMagic( &$magicWords ) {
-		$magicWords['txtscrl'] = array( 0, 'txtscrl' );
-		return true;
-	}
-
 }

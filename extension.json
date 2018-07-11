@@ -13,13 +13,13 @@
 			"i18n"
 		]
 	},
+	"ExtensionMessagesFiles": {
+		"TextScrollerMagic": "TextScroller.i18n.magic.php"
+	},
 	"AutoloadClasses": {
 		"TextScroller": "TextScroller.body.php"
 	},
 	"Hooks": {
-		"LanguageGetMagic": [
-			"TextScroller::languageGetMagic"
-		],
 		"ParserFirstCallInit": [
 			"TextScroller::setParserFunction"
 		]
