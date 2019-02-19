@@ -111,23 +111,6 @@ if ( typeof Object.create !== 'function' ) {
 	var timer;
 	var typers = {};
 
-	// Init the typers
-	$( function() {
-		adjustCSS();
-		addLineBreaks();
-
-		var ua = navigator.userAgent.toLowerCase();
-		if ( !( /msie (\d+\.\d+);/.test( ua ) && parseInt( ua.split( 'msie' )[1] <= 8 ) ) ) {
-			toggleScrollers();
-
-			// On scroll complete toggle viewable videos to play state
-			$( window ).bind( 'scroll', function () {
-				window.clearTimeout( timer );
-				timer = setTimeout( toggleScrollers, WAIT_INTERVAL );
-			} );
-		}
-	} );
-
 	// Reformat scroller text by replacing line break tokens with appropriate HTML or ASCII line breaks
 	function addLineBreaks() {
 		$( '.greytext' ).each( function( i, div ) {
@@ -225,5 +208,22 @@ if ( typeof Object.create !== 'function' ) {
 		}
 		return largeDisplay;
 	}
+
+	// Init the typers
+	$( function() {
+		adjustCSS();
+		addLineBreaks();
+
+		var ua = navigator.userAgent.toLowerCase();
+		if ( !( /msie (\d+\.\d+);/.test( ua ) && parseInt( ua.split( 'msie' )[1] <= 8 ) ) ) {
+			toggleScrollers();
+
+			// On scroll complete toggle viewable videos to play state
+			$( window ).on( 'scroll', function () {
+				window.clearTimeout( timer );
+				timer = setTimeout( toggleScrollers, WAIT_INTERVAL );
+			} );
+		}
+	} );
 
 } ) ( jQuery );

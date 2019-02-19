@@ -5,7 +5,6 @@ class TextScroller {
 	public static function setParserFunction( &$parser ) {
 		# Setup parser hook
 		$parser->setFunctionHook( 'txtscrl', 'TextScroller::parserFunction' );
-		return true;
 	}
 
 	public static function parserFunction( $parser, $arrowText = '', $grayText = '', $scrollText = '' ) {

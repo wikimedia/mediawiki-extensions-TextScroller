@@ -1,8 +1,8 @@
 .textscroller_outer {
 	width: 500px;
 	padding: 0 20px 0 20px;
-	background: #D3D3D3;
-	border: 1px solid gray;
+	background: #d3d3d3;
+	border: 1px solid #808080;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5px;
@@ -10,7 +10,7 @@
 }
 
 .textscroller_inner {
-	background: white;
+	background: #fff;
 	padding: 40px 20px 30px 20px !important;
 	overflow: hidden;
 }
@@ -28,7 +28,7 @@
 }
 
 .greytext {
-	color: gray;
+	color: #808080;
 	font-weight: bold;
 	font-size: 12px;
 	margin: 0 0 10px 0;
@@ -44,7 +44,7 @@
 	font-weight: bold;
 	padding-left: 5px;
 	background: #336633;
-	color: white;
+	color: #fff;
 	overflow: hidden;
 	white-space: nowrap;
 	line-height: 24px;
@@ -76,6 +76,7 @@
 	width: 211px;
 	padding: 0 10px 0 10px;
 }
+
 .scroller_inner_mobile {
 	height: 70px;
 }

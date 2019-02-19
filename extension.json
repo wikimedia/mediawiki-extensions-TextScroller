@@ -1,6 +1,6 @@
 {
 	"name": "txtscrl",
-	"version": "1.0",
+	"version": "1.1",
 	"author": [
 		"Jordan Small"
 	],
@@ -20,9 +20,7 @@
 		"TextScroller": "TextScroller.body.php"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": [
-			"TextScroller::setParserFunction"
-		]
+		"ParserFirstCallInit": "TextScroller::setParserFunction"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
