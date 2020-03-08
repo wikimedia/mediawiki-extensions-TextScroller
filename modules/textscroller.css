@@ -43,7 +43,7 @@
 .arrow_text {
 	font-weight: bold;
 	padding-left: 5px;
-	background: #336633;
+	background: #363;
 	color: #fff;
 	overflow: hidden;
 	white-space: nowrap;
@@ -57,7 +57,7 @@
 	height: 0;
 	border-top: 12px solid transparent;
 	border-bottom: 12px solid transparent;
-	border-left: 24px solid #336633;
+	border-left: 24px solid #363;
 }
 
 .scroller_none {

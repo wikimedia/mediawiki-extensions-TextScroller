@@ -1,0 +1,24 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia/client",
+		"wikimedia/jquery"
+	],
+	"globals": {
+		"mw": false,
+		"OO": false
+	},
+	"rules": {
+		"eqeqeq": "off",
+		"max-len": "off",
+		"no-jquery/no-global-selector": "off",
+		"no-jquery/no-sizzle": "off",
+		"no-jquery/variable-pattern": "off",
+		"no-redeclare": "off",
+		"no-underscore-dangle": "off",
+		"no-unused-vars": "off",
+		"no-use-before-define": "off",
+		"one-var": "off",
+		"vars-on-top": "off"
+	}
+}
