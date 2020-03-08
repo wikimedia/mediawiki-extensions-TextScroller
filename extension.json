@@ -23,8 +23,8 @@
 		"ParserFirstCallInit": "TextScroller::setParserFunction"
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "TextScroller"
+		"localBasePath": "modules",
+		"remoteExtPath": "TextScroller/modules"
 	},
 	"ResourceModules": {
 		"ext.textscroller.styles": {
