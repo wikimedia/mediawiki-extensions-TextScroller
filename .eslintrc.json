@@ -16,6 +16,7 @@
 		"no-unused-vars": "off",
 		"no-use-before-define": "off",
 		"one-var": "off",
-		"vars-on-top": "off"
+		"vars-on-top": "off",
+		"compat/compat": "warn"
 	}
 }
