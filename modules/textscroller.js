@@ -24,10 +24,11 @@ if ( typeof Object.create !== 'function' ) {
 			doType: function () {
 				var _this = this,
 					letter = _this.letters.shift();
+
 				if (
 					letter == '\n' || letter == '\r' ||
-				letter.charCodeAt( 0 ) == 10 ||
-				letter.charCodeAt( 0 ) == 13
+					letter.charCodeAt( 0 ) == 10 ||
+					letter.charCodeAt( 0 ) == 13
 				) {
 					letter = '<br>';
 				}
@@ -72,7 +73,7 @@ if ( typeof Object.create !== 'function' ) {
 
 			// Plugin init function
 			init: function ( el, options, callback ) {
-			// Hide arrow if there isn't any text
+				// Hide arrow if there isn't any text
 				var arrow = $( el ).parent().parent().find( '.arrow_outer' );
 				if ( arrow.text() == '' ) {
 					arrow.hide();
