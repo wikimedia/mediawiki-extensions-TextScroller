@@ -2,11 +2,21 @@
 
 class TextScroller {
 
+	/**
+	 * @param Parser &$parser
+	 */
 	public static function setParserFunction( &$parser ) {
 		# Setup parser hook
 		$parser->setFunctionHook( 'txtscrl', 'TextScroller::parserFunction' );
 	}
 
+	/**
+	 * @param Parser $parser
+	 * @param string $arrowText
+	 * @param string $grayText
+	 * @param string $scrollText
+	 * @return string
+	 */
 	public static function parserFunction( $parser, $arrowText = '', $grayText = '', $scrollText = '' ) {
 		$scrollText = self::prepareText( $scrollText );
 		$grayText = self::prepareText( $grayText );
@@ -38,6 +48,10 @@ TEXTSCROLLER;
 		return $parser->insertStripItem( $html );
 	}
 
+	/**
+	 * @param string $text
+	 * @return string
+	 */
 	private static function prepareText( $text ) {
 		$text = trim( $text );
 		// Replace line breaks with a token to later be replaced in the scroller JavaScript
