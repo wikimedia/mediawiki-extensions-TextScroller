@@ -2,6 +2,7 @@
 	"extends": "stylelint-config-wikimedia",
 	"rules": {
 		"declaration-block-no-redundant-longhand-properties": null,
-		"declaration-no-important": null
+		"declaration-no-important": null,
+		"declaration-property-unit-disallowed-list": null
 	}
 }
