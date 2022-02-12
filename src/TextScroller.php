@@ -22,8 +22,8 @@ class TextScroller {
 		$grayText = self::prepareText( $grayText );
 		$arrowText = self::prepareText( $arrowText );
 
-		$parser->getOutput()->addModules( 'ext.textscroller.scripts' );
-		$parser->getOutput()->addModuleStyles( 'ext.textscroller.styles' );
+		$parser->getOutput()->addModules( [ 'ext.textscroller.scripts' ] );
+		$parser->getOutput()->addModuleStyles( [ 'ext.textscroller.styles' ] );
 
 		if ( !empty( $arrowText ) ) {
 			$outerContent = "\t\t<div class=\"arrow_right\"></div>\n\t\t<div class=\"arrow_text\">{$arrowText}</div>\n";
