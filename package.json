@@ -1,4 +1,5 @@
 {
+	"name": "TextScroller",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
