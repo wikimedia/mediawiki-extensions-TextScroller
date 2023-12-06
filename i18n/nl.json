@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"textscroller-desc": "Voegt een parserfunctie toe om de tekstscrollwidget in te bedden"
+}
