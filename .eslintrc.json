@@ -15,6 +15,7 @@
 		"no-underscore-dangle": "off",
 		"no-unused-vars": "off",
 		"no-use-before-define": "off",
-		"compat/compat": "warn"
+		"compat/compat": "warn",
+		"no-jquery/no-extend": "warn"
 	}
 }
