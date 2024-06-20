@@ -82,7 +82,7 @@ if ( typeof Object.create !== 'function' ) {
 				// Strip HTML from text
 				$( el ).html( $( el ).text() );
 
-				this.options = $.extend( {}, this.options, options );
+				this.options = Object.assign( {}, this.options, options );
 				this.callback = callback;
 				this.el = el;
 				this.$el = $( el );
