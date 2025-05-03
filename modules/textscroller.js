@@ -11,7 +11,7 @@ if ( typeof Object.create !== 'function' ) {
 ( function () {
 
 	// Main plugin class
-	var Typer = {
+	let Typer = {
 
 			// Plugin option defaults, overrideable by user
 			options: {
@@ -22,7 +22,7 @@ if ( typeof Object.create !== 'function' ) {
 
 			// Recursive function that types one letter at a time
 			doType: function () {
-				var _this = this,
+				let _this = this,
 					letter = _this.letters.shift();
 
 				if (
@@ -35,7 +35,7 @@ if ( typeof Object.create !== 'function' ) {
 				_this.el.innerHTML += letter;
 
 				// Scroll to bottom of the div to simulate the div being scrolled
-				var scrollHeight = _this.el.scrollHeight;
+				const scrollHeight = _this.el.scrollHeight;
 				// if ( scrollHeight > this.prevScrollHeight ) {
 				$( _this.el ).parent().scrollTop( scrollHeight );
 				// this.prevScrollHeight = scrollHeight;
@@ -44,7 +44,7 @@ if ( typeof Object.create !== 'function' ) {
 				// If there are more letters to type, setTimeout
 				// Otherwise, execute callback function
 				if ( _this.letters.length > 0 ) {
-					_this.timeout = window.setTimeout( function () {
+					_this.timeout = window.setTimeout( () => {
 						_this.doType();
 					}, _this.options.speed );
 				} else {
@@ -74,7 +74,7 @@ if ( typeof Object.create !== 'function' ) {
 			// Plugin init function
 			init: function ( el, options, callback ) {
 				// Hide arrow if there isn't any text
-				var arrow = $( el ).parent().parent().find( '.arrow_outer' );
+				const arrow = $( el ).parent().parent().find( '.arrow_outer' );
 				if ( arrow.text() == '' ) {
 					arrow.hide();
 				}
@@ -117,7 +117,7 @@ if ( typeof Object.create !== 'function' ) {
 			$( this ).html( $( this ).html().replace( /@br@/g, '<br/>' ) );
 		} );
 		$( '.scrolltext' ).each( function ( i, div ) {
-			var ua = navigator.userAgent.toLowerCase();
+			const ua = navigator.userAgent.toLowerCase();
 			if ( /msie (\d+\.\d+);/.test( ua ) && parseInt( ua.split( 'msie' )[ 1 ] <= 8 ) ) {
 				$( this ).html( $( this ).html().replace( /@br@/g, '<br/>' ) );
 			} else {
@@ -130,7 +130,7 @@ if ( typeof Object.create !== 'function' ) {
 	 * Make some CSS tweaks for specific browsers
 	 */
 	function adjustCSS() {
-		var ua = navigator.userAgent.toLowerCase(),
+		const ua = navigator.userAgent.toLowerCase(),
 			isOlderIE = /msie (\d+\.\d+);/.test( ua ),
 			ieVersion = parseInt( ua.split( 'msie' )[ 1 ] );
 
@@ -166,8 +166,8 @@ if ( typeof Object.create !== 'function' ) {
 	}
 
 	function toggleScrollers() {
-		$( 'div[id^=scrl-]' ).each( function ( i, div ) {
-			var divId = $( div ).attr( 'id' ),
+		$( 'div[id^=scrl-]' ).each( ( i, div ) => {
+			const divId = $( div ).attr( 'id' ),
 				typer = typers[ divId ];
 			if ( isScrolledIntoView( div ) ) {
 				if ( typeof typer === 'undefined' ) {
@@ -191,7 +191,7 @@ if ( typeof Object.create !== 'function' ) {
 	}
 
 	function isScrolledIntoView( elem ) {
-		var docViewTop = $( window ).scrollTop(),
+		const docViewTop = $( window ).scrollTop(),
 			docViewBottom = docViewTop + $( window ).height(),
 			elemTop = $( elem ).offset().top,
 			elemBottom = elemTop + $( elem ).height();
@@ -201,7 +201,7 @@ if ( typeof Object.create !== 'function' ) {
 	}
 
 	function isLargeDisplay() {
-		var largeDisplay = true,
+		let largeDisplay = true,
 			isLandscape = ( document.documentElement.clientHeight < document.documentElement.clientWidth );
 		if ( ( document.documentElement.clientWidth < 600 ) || ( document.documentElement.clientHeight < 421 && isLandscape ) ) {
 			largeDisplay = false;
@@ -210,16 +210,16 @@ if ( typeof Object.create !== 'function' ) {
 	}
 
 	// Init the typers
-	$( function () {
+	$( () => {
 		adjustCSS();
 		addLineBreaks();
 
-		var ua = navigator.userAgent.toLowerCase();
+		const ua = navigator.userAgent.toLowerCase();
 		if ( !( /msie (\d+\.\d+);/.test( ua ) && parseInt( ua.split( 'msie' )[ 1 ] <= 8 ) ) ) {
 			toggleScrollers();
 
 			// On scroll complete toggle viewable videos to play state
-			$( window ).on( 'scroll', function () {
+			$( window ).on( 'scroll', () => {
 				window.clearTimeout( timer );
 				timer = setTimeout( toggleScrollers, WAIT_INTERVAL );
 			} );
