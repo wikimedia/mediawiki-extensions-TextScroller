@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"textscroller-desc": "Pridáva funkciu syntaktického analyzátora na vloženie widgetu posúvania textu"
+}
