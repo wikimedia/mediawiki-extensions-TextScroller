@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Revi"
+			"Revi",
+			"Tensama0415"
 		]
 	},
-	"textscroller-desc": "텍스트 스크롤 위젯을 불러오는 파서펑션 추가"
+	"textscroller-desc": "텍스트 스크롤 위젯을 삽입하기 위한 파서 함수를 추가합니다"
 }
